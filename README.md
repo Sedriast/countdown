@@ -10,6 +10,6 @@
 
 <p>But the Countdown Time App is more than just a timer. It's a powerful tool for habit formation and productivity. With customizable alerts and notifications, you can stay on top of your schedule and make every minute count. Plus, our app integrates with your calendar and other productivity tools, so you can seamlessly incorporate it into your workflow.</p>
 
-<h1>So why wait? Download the Countdown Time App today and start making every minute count!</h1>
+<h1>So why wait?</h1>
 
 

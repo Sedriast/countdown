@@ -1,15 +1,14 @@
-import { Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 
-export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+import { GeneralProvider } from "@/hooks/useGeneralContext";
+import RootLayout from "./_layout";
+
+export default function App() {
+	return (
+		<NavigationContainer independent={true}>
+			<GeneralProvider>
+				<RootLayout />
+			</GeneralProvider>
+		</NavigationContainer>
+	);
 }

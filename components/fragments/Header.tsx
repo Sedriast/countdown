@@ -1,5 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import {
+	View,
+	Image,
+	TextInput,
+	StyleSheet,
+	TouchableOpacity,
+} from "react-native";
 
 interface HeaderProps {
 	theme: {};
@@ -7,23 +13,59 @@ interface HeaderProps {
 
 export default function Header({ theme }: HeaderProps) {
 	return (
-		<View style={styles.header}>
-			<Text style={styles.headerTitle}>{"this i the title"}</Text>
+		<View style={st.header}>
+			<Image
+				style={st.logo}
+				source={require("../../assets/images/adaptive-icon.png")}
+			/>
+			<TextInput style={st.searchInput} placeholder="Buscar" />
+			<TouchableOpacity
+				onPress={() => {
+					console.log("Account button pressed");
+				}}>
+				<Image
+					style={st.logo}
+					source={require("../../assets/images/adaptive-icon.png")}
+				/>
+			</TouchableOpacity>
 		</View>
 	);
 }
 
-const styles = StyleSheet.create({
+const st = StyleSheet.create({
 	header: {
+		height: 75,
 		width: "100%",
-		height: 60,
-		paddingTop: 15,
-		backgroundColor: "#f7287b",
+		flexDirection: "row",
 		alignItems: "center",
-		justifyContent: "center",
+		paddingHorizontal: 20,
+		backgroundColor: "#67E8F9",
+		justifyContent: "space-between",
 	},
-	headerTitle: {
-		color: "white",
-		fontSize: 18,
+	logo: {
+		width: 45,
+		height: 45,
+		marginRight: 10,
+	},
+	searchInput: {
+		width: 275,
+		height: 45,
+		fontSize: 20,
+		borderWidth: 1,
+		marginLeft: 10,
+		marginRight: 10,
+		borderStyle: "solid",
+		paddingHorizontal: 20,
+		borderColor: "#0E7490",
+		backgroundColor: "#A5F3FC",
+		borderTopLeftRadius: 22.5,
+		borderTopRightRadius: 22.5,
+		borderBottomLeftRadius: 22.5,
+		borderBottomRightRadius: 22.5,
+	},
+	accountButton: {
+		width: 45,
+		height: 45,
+		marginLeft: 10,
 	},
 });

@@ -1,19 +1,22 @@
+import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { StatusBar } from "react-native";
 
-import { GeneralContext } from "@/hooks/useGeneralContext";
+import Dashboard from "@/components/Dashboard";
+import { StyleSheet, View } from "react-native";
 import Header from "@/components/fragments/Header";
-import Home from "@/components/Home";
+import Footer from "@/components/fragments/Footer";
+import { StatusBar } from "expo-status-bar";
 
 const Stack = createNativeStackNavigator();
 
-export default function RootLayout() {
+export default function Layout() {
 	return (
-		<Stack.Navigator initialRouteName="Home">
+		<Stack.Navigator initialRouteName="Dashboard">
 			<Stack.Screen
-				name="Home"
-				component={Home}
+				name="Dashboard"
+				component={Dashboard}
 				options={{
+					title: "Dashboard",
 					headerShown: false,
 				}}
 			/>

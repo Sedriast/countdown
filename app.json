@@ -31,6 +31,9 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "statusBar": {
+      "backgroundColor": "#67E8F9"
     }
   }
 }

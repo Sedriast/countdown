@@ -1,33 +1,22 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { StatusBar, StyleSheet, View } from "react-native";
-
 import { GeneralProvider } from "@/hooks/useGeneralContext";
-import Header from "@/components/fragments/Header";
-import RootLayout from "./layout";
+import { StatusBar } from "expo-status-bar";
+
 import Footer from "@/components/fragments/Footer";
+import Header from "@/components/fragments/Header";
+import Layout from "./layout";
 
 export default function App() {
 	return (
-		<NavigationContainer independent={true}>
+		<>
 			<StatusBar backgroundColor="#67E8F9" />
-			<View style={st.screen}>
-				<Header theme="" />
+			<Header theme={{}} />
+			<NavigationContainer independent={true}>
 				<GeneralProvider>
-					<RootLayout />
+					<Layout />
 				</GeneralProvider>
-				<Footer theme="" />
-			</View>
-		</NavigationContainer>
+			</NavigationContainer>
+			<Footer theme={{}} />
+		</>
 	);
 }
-
-const st = StyleSheet.create({
-	screen: {
-		width: "100%",
-		height: "100%",
-		alignItems: "center",
-		flexDirection: "column",
-		backgroundColor: "#CFFAFE",
-		justifyContent: "space-between",
-	},
-});

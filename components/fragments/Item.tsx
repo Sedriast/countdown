@@ -36,8 +36,8 @@ const st = StyleSheet.create({
 		right: 5,
 		width: 45,
 		height: 45,
-		position: "absolute",
 		borderRadius: 20,
+		position: "absolute",
 		backgroundColor: "#0891B2",
 	},
 	logo: {
